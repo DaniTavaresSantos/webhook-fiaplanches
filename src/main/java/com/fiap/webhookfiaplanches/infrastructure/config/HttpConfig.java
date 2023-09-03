@@ -1,6 +1,6 @@
 package com.fiap.webhookfiaplanches.infrastructure.config;
 
-import com.fiap.webhookfiaplanches.api.http.FiapLanchesCallback;
+import com.fiap.webhookfiaplanches.web.http.FiapLanchesCallback;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

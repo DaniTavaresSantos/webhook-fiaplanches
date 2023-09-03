@@ -1,4 +1,4 @@
-package com.fiap.webhookfiaplanches.api.http;
+package com.fiap.webhookfiaplanches.web.http;
 
 import com.fiap.webhookfiaplanches.domain.dto.PaymentStatusRecord;
 import org.springframework.web.bind.annotation.RequestBody;

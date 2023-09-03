@@ -3,6 +3,7 @@ package com.fiap.webhookfiaplanches.infrastructure;
 import com.fiap.webhookfiaplanches.domain.dto.PaymentRecord;
 import com.fiap.webhookfiaplanches.domain.dto.PaymentStatusRecord;
 import com.fiap.webhookfiaplanches.domain.enums.PaymentStatusEnum;
+import com.fiap.webhookfiaplanches.infrastructure.abstractions.PaymentGateway;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
