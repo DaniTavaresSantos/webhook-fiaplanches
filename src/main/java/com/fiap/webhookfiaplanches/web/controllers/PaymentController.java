@@ -1,4 +1,4 @@
-package com.fiap.webhookfiaplanches.web;
+package com.fiap.webhookfiaplanches.web.controllers;
 
 import com.fiap.webhookfiaplanches.domain.dto.PaymentRecord;
 import com.fiap.webhookfiaplanches.aplication.useCases.PaymentUseCase;
