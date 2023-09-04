@@ -17,7 +17,7 @@ public class PaymentGatewayImpl implements PaymentGateway {
     public PaymentStatusRecord receivePayment(PaymentRecord paymentRecord) {
         int chance = random.nextInt(100) + 1;
 
-        String orderId = paymentRecord.orderId();
+        var orderId = paymentRecord.orderId();
 
         if (chance <= 5) {
             return new PaymentStatusRecord(PaymentStatusEnum.REJECTED, "Insufficient funds.", orderId);

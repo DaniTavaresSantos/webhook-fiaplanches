@@ -8,6 +8,6 @@ import org.springframework.web.service.annotation.PostExchange;
 @HttpExchange
 public interface FiapLanchesCallback {
 
-    @PostExchange("/pagamentos")
+    @PostExchange("/pedidos/atualiza-status-pagamento")
     void receivePayment(@RequestBody PaymentStatusRecord paymentStatusRecord);
 }
