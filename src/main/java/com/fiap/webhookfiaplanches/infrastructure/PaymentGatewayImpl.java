@@ -3,6 +3,7 @@ package com.fiap.webhookfiaplanches.infrastructure;
 import com.fiap.webhookfiaplanches.domain.dto.PaymentRecord;
 import com.fiap.webhookfiaplanches.domain.dto.PaymentStatusRecord;
 import com.fiap.webhookfiaplanches.domain.enums.PaymentStatusEnum;
+import com.fiap.webhookfiaplanches.infrastructure.abstractions.PaymentGateway;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -16,7 +17,7 @@ public class PaymentGatewayImpl implements PaymentGateway {
     public PaymentStatusRecord receivePayment(PaymentRecord paymentRecord) {
         int chance = random.nextInt(100) + 1;
 
-        String orderId = paymentRecord.orderId();
+        var orderId = paymentRecord.orderId();
 
         if (chance <= 5) {
             return new PaymentStatusRecord(PaymentStatusEnum.REJECTED, "Insufficient funds.", orderId);

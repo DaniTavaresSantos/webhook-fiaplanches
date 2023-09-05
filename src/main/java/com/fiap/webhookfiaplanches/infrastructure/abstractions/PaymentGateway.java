@@ -1,4 +1,4 @@
-package com.fiap.webhookfiaplanches.infrastructure;
+package com.fiap.webhookfiaplanches.infrastructure.abstractions;
 
 import com.fiap.webhookfiaplanches.domain.dto.PaymentRecord;
 import com.fiap.webhookfiaplanches.domain.dto.PaymentStatusRecord;

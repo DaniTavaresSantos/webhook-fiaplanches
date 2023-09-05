@@ -1,7 +1,7 @@
-package com.fiap.webhookfiaplanches.api;
+package com.fiap.webhookfiaplanches.web.controllers;
 
 import com.fiap.webhookfiaplanches.domain.dto.PaymentRecord;
-import com.fiap.webhookfiaplanches.domain.service.PaymentService;
+import com.fiap.webhookfiaplanches.aplication.useCases.PaymentUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class PaymentController {
 
     @Autowired
-    PaymentService paymentService;
+    PaymentUseCase paymentUseCase;
 
     @PostMapping
     public ResponseEntity<HttpStatus> receivePayment(@RequestBody PaymentRecord paymentRecord) {
-        paymentService.receivePayment(paymentRecord);
+        paymentUseCase.receivePayment(paymentRecord);
 
         return ResponseEntity.ok().build();
     }
