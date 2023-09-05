@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: webhook-config
+  labels:
+    app: webhook-fiaplanches
+data:
+  FIAPLANCHES_API_CALLBACK: "http://fiap-lanches-api-cluster-ip-svc:8080"
